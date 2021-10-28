@@ -1,0 +1,205 @@
+\documentclass[%singlesided,
+               doublesided,
+               paper=a4,
+               fontsize=10pt
+              ]{my-resume}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set geometry
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\setlength\highlightwidth{8cm}
+\setlength\headerheight{1cm}            % note that margintop gets added to this value, i.e. the header bar is 5cm
+\setlength\marginleft{1cm}
+\setlength\marginright{\marginleft}      % needs to be 1.5 times to be actually equal. why?
+\setlength\margintop{1cm}
+\setlength\marginbottom{1cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% FONTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\RequirePackage{fontspec}
+\setmainfont{Times New Roman}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% COLORS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\colorlet{highlightbarcolor}{lightgray}
+\colorlet{headerbarcolor}{darkgray}
+
+
+\colorlet{headerfontcolor}{white}
+% \colorlet{accent}{awesome-red}
+\definecolor{accent}{HTML}{0D8FCD}
+\colorlet{heading}{black}
+\colorlet{emphasis}{black}
+\colorlet{body}{black}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% set document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+\name{Anthony S. Walker}
+
+\makeheader
+
+\highlightbar{
+    
+    
+    \section{Contact}
+    
+    \tikz\path[fill overzoom image={walker-gray.jpg}]circle[radius=0.4\linewidth];
+    \smallskip
+    
+    \email{walkanth@oregonstate.edu}
+    \phone{707-337-3595}
+    \location{Corvallis OR}
+    \vspace{0.5em}
+    \github{@anthony-walker}{https://github.com/anthony-walker}
+    \gitlab{@dev.sokato}{https://github.com/dev.sokato}
+    \linkedin{Anthony Walker}{https://www.linkedin.com/in/anthony-walker-4b8a9712b/}
+    \orcid{0000-0002-0616-6998}{https://www.orcid.org/0000-0002-0616-6998}
+    \nrg{My Research Lab!}{https://niemeyer-research-group.github.io/team/}
+    
+    \section{Skills}
+    
+    \skillsection{Programming}
+    \skill{C/C++}{5}
+    \skill{Python}{5}
+    \skill{Latex}{4}
+    \skill{Matlab}{4}
+    \skill{Bash}{3}
+    \skill{Java}{3}
+    \skill{Javascript}{2}
+    \skill{SQL}{2}
+    \skill{Haskell}{2}
+    \skill{x86}{2}
+    \skill{HTML/CSS}{1}
+    
+    
+    \vspace{0.5em}
+    \skillsection{Operating Systems}
+    \skill{Arch Linux}{5}
+    \skill{Ubuntu}{4}
+    \skill{MacOS}{3}
+    \skill{Windows}{3}
+    
+    \vspace{0.5em}
+    \skillsection{Software \& Tools}
+    \skill{Git}{5}
+    \skill{MPI}{4}
+    \skill{CUDA}{4}
+    \skill{Cantera}{4}
+    \skill{Office}{3}
+    \skill{Slurm}{2}
+    \skill{OpenCL/GL}{2}
+    \skill{Ghidra}{2}
+    \skill{React}{1}
+    \skill{Django}{1}
+    
+    \vspace{0.5em}
+    \skillsection{Languages}
+    \skill{English}{5}
+    \skill{French}{3}
+    \skill{Japanese}{1}
+
+}
+\mainbar{
+    \section[\faGears]{Employment}
+    \job{08/2018}
+        {Oregon State University, Corvallis OR}
+        {Graduate Research Assistant}
+        {\begin{itemize}
+            \item Develop research software to improve performance when modeling physical phenomena
+        \end{itemize}}
+    \job{08/2016 - 5/2018}
+        {Penn State University, Erie PA}
+        {Undergraduate Research Assistant}
+        {\begin{itemize}
+            \item Develop codes to analyze experimental energy harvesting data 
+            \item Analyze the design and accessibility of digital braille technology
+        \end{itemize}}
+        
+    \job{05/2017-08/2017}{Bell Helicopter, Ft. Worth TX}{Test Stand Engineering Intern}{\begin{itemize}
+        \item Streamline maintenance and repair processes with systems modeling
+    \end{itemize}}
+    
+    \job{11/2015-05/2018}{Emergycare, Erie PA}{EMT-B}{\begin{itemize}
+    \item Provide pre-hospital care to patients in emergency and non-emergency situations
+\end{itemize}}
+    
+    
+    \section[\faMortarBoard]{Education}
+    \job{09/2018}
+        {Oregon State University, Corvallis OR}
+        {Mechanical Engineering PhD\\Computer Science PhD Minor\\GPA 3.83}{}
+
+    \job{09/2018-03/2021}
+        {Oregon State University, Corvallis OR}
+        {Mechanical Engineering M.S.\\
+        GPA 3.83}{}
+        
+    \job{08/2014 - 05/2018}
+        {Penn State University, Erie PA}
+        {Mechanical Engineering B.S.\\Computer Science Minor}{}
+
+    
+    % \section{General Skills}
+    % \smallskip % additional skip because tag outlines use up space
+    % \tag{Tag 1}
+    % \tag{Tag 2}
+    % \tag{and}
+    % \tag{another tag}
+    % \tag{some more tags}
+    % \tag{yet another one}
+    % \tag{tags flow over}
+    % \tag{to the next line}
+    % \tag{if necessary}
+    
+    \section[\faPaperclip]{Graduate Coursework}
+    % This is taken from AltaCV
+    % see https://github.com/liantze/AltaCV for details
+    \wheelchart{1.5cm}{0.5cm}{% outer and inner diameter
+        10/8em/accent!40/Thermal Fluid Sciences,    % fraction of 24 / line length / color / label
+        6/8em/accent!80/Mathematics,          % here, the color is shades of the accent color
+        11/8em/accent!60/Computer Science
+        % , 3/8em/accent/Cybersecurity
+    }
+    
+    \section[\faFile]{Publications}
+    \publication
+	{The two-dimensional swept rule applied on heterogeneous architectures.} % Title
+	{\textbf{Walker, Anthony S.} \& Niemeyer,  Kyle E.} % Authors
+	{2021} % Year
+	{MDPI: Mathematical and Computational Applications,\\ https://doi.org/10.3390/mca26030052} % Journal
+	{} % ADS & arxiv links
+	\publication
+	{Applying the swept rule for solving explicit partial differential equations on heterogeneous computing systems} % Title
+	{Magee, Daniel J \& \textbf{Walker, Anthony S} \& Niemeyer, Kyle E} % Authors
+	{2020} % Year
+	{Journal of Supercomputing,\\ https://doi.org/10.1007/s11227-020-03340-9} % Journal
+	{} % ADS & arxiv links
+
+    \publication
+	{Design Exploration of Affordable Refreshable Braille Display Technology for Low-Income Visually Impaired Users} % Title
+	{\textbf{Walker, Anthony S} \& Sangelkar, Shraddha} % Authors
+	{2017} % Year
+	{ASME 2017 International Design Engineering Technical Conferences, https://doi.org/10.1115/DETC2017-67247} % Journal
+	{} % ADS & arxiv links
+}
+
+% \section[\faFile]{Extra-Curricular}
+
+\makebody
+
+
+\end{document}

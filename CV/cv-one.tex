@@ -1,0 +1,232 @@
+\bfseries%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.3, 10 May 2020) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[8pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicon fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+\usepackage{academicons}
+\usepackage{svg}
+
+% Change the font if you want to, depending on whether
+% you're using pdflatex or xelatex/lualatex
+\ifxetexorluatex
+  % If using xelatex or lualatex:
+\else
+  % If using pdflatex:
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+% Change the colours if you want to
+\definecolor{PastelRed}{HTML}{0D8FCD}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{PastelRed}
+\colorlet{heading}{PastelRed}
+\colorlet{headingrule}{PastelRed}
+% \colorlet{subheading}{PastelRed}
+\colorlet{accent}{PastelRed}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+\renewcommand{\namefont}{\Large\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+\renewcommand{\cvsectionfont}{\large\bfseries}
+\renewcommand{\cveventfont}{\large\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faSquare}
+\renewcommand{\labelenumii}{\Roman{enumii}}
+%% sample.bib contains your publications
+\addbibresource{pubs.bib}
+
+\begin{document}
+\name{Anthony S. Walker}
+\tagline{Oregon State University PhD Student}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+\photoR{3cm}{walker-gray.jpg}
+% \photoL{2cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \email{walkanth@oregonstate.edu   }
+%   \phone{000-00-0000}
+  \location{Corvallis, OR}
+%   \homepage{marissamayr.tumblr.com}
+%   \twitter{@marissamayer} \linkedin{marissamayer}
+  \github{anthony-walker}
+  
+%   \orcid{orcid.org/0000-0002-0616-6998} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{0000-0000-0000-0000}
+  %% You can add your own arbtrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}
+  %% Or you can declare your own field with
+%   \newcommand*\nrglogo{\includegraphics{lab-logo.svg}}
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  \gitlab{dev.sokato}
+  \newcommand{\lablogo}{\includesvg[scale=0.15]{lab-logo-original.svg}}
+   \NewInfoField{NRG}{\lablogo}[https://niemeyer-research-group.github.io/team/]
+  \NRG{anthony-walker}
+  \NewInfoField{ORCID}{\includesvg[scale=0.05]{orcid.svg}}[]
+  \ORCID{https://orcid.org/0000-0002-0616-6998}
+}
+
+\makecvheader
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.55}
+
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+\cvsection{Education}
+
+\cvevent{PhD\ in Mechanical Engineering,\newline Graduate Minor in Computer Science (GPA 3.83)}{Oregon State University}{Sept 2018 -- Ongoing}{}
+
+\divider
+
+\cvevent{M.S.\ in Mechanical Engineering (GPA 3.83)}{Oregon State University}{Sept 2018 -- Mar 2021}{}
+
+\divider
+
+\cvevent{B.S.\ in Mechanical Engineering,\newline Minor \ in Computer Science (GPA 3.41)}{Penn State University}{Aug 2014 -- May 2018}{}
+    
+
+\cvsection{Graduate Coursework}
+\begin{flushleft}
+    \wheelchart{1.5cm}{0.5cm}{% outer and inner diameter
+        10/8em/accent!40/Thermal Fluid Sciences,    % fraction of 24 / line length / color / label
+        6/8em/accent!80/Numerical Analysis,          % here, the color is shades of the accent color
+        6/8em/accent!60/Computer Science,
+        3/8em/accent/Cybersecurity
+    }
+\end{flushleft}
+
+\cvsection{Publications}
+
+\nocite{*}
+
+\printbibliography[heading=pubtype,title={\printinfo{\faFile*[regular]}{Journal Articles}}, type=article]
+
+\printbibliography[heading=pubtype,title={\printinfo{\faUsers}{Conference Proceedings}},type=inproceedings]
+
+
+\switchcolumn
+\cvsection{Employment}
+\cvevent{Graduate Research Assistant}{Oregon State University}{Sept 2018 -- Ongoing}{Corvallis OR}
+% \begin{enumerate}
+%     \item Implementation of a 2D heterogeneous PDE solver---see publications.
+%     \item Extending the functionality of an open source kinetics suite---Cantera via implementing and improving numerical methods.
+% \end{enumerate}
+\begin{itemize}
+            \item Develop research software to improve performance when modeling physical phenomena
+        \end{itemize}
+\divider
+
+\cvevent{Undergraduate Research Assistant}{Penn State University}{Aug 2016 -- May 2018}{Erie, PA}
+
+% \begin{enumerate}
+% \item USISTEF funded project on Digital Braille Devices & Academic Research Grant for GUI Development  – Dr. Shraddha Sangelkar (August 2016 – May 2018)
+% \item Modeling of Piezoelectric Cantilevers in Turbulent Flow – Dr. Amir Danesh-Yazdi (August 2017 – May 2018).
+% \end{enumerate}
+\begin{itemize}
+            \item Develop codes to analyze experimental energy harvesting data 
+            \item Analyze the design and accessibility of digital braille technology
+\end{itemize}
+
+\divider
+
+
+
+\cvevent{Test Stand Engineering Intern}{Bell Helicopter}{May 2017 --  Aug 2017}{Ft. Worth, TX}
+
+
+\begin{itemize}
+        \item Streamline maintenance and repair processes with systems modeling
+    \end{itemize}
+
+\divider
+
+\cvevent{EMT-B}{EmergyCare}{Nov 2015 -- May 2018}{Erie, PA}
+\begin{itemize}
+    \item Provide pre-hospital care to patients in emergency and non-emergency situations
+\end{itemize}
+
+
+
+
+
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+
+
+
+
+
+\cvsection{Programming Experience}
+\cvskill{C++, Python, Matlab}{5}
+\cvskill{C, CUDA, Latex}{4}
+\cvskill{Bash, Java}{3}
+\cvskill{Javascript, SQL, Haskell}{2}
+\cvskill{x86, HTML/CSS, XML}{1}
+
+
+\cvsection{Software Tools}
+\cvskill{ArchLinux, Ubuntu}{5}
+\cvskill{MPI, OpenMP, Git}{4}
+\cvskill{OpenCL, OpenGL}{2}
+\cvskill{React, Django}{1}
+
+\cvsection{Languages}
+\cvskill{English}{5}
+\cvskill{French}{3}
+\cvskill{Japanese}{1}
+
+
+
+
+\end{paracol}
+
+\end{document}
