@@ -1,5 +1,5 @@
 %
-% FDUletter.cls -- a document class for writing letters with OSU letterhead 
+% OSULetter.cls -- a document class for writing letters with OSU letterhead 
 % This class based on "brownletter.cls" Copyright 2003, Nesime Tatbul (tatbul@cs.brown.edu)
 %
 % This version modifications by Huang Weiran 
@@ -18,7 +18,7 @@
 %
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{FDUletter}
+\ProvidesClass{OSULetter}
 \RequirePackage{graphicx}
 \RequirePackage{epstopdf}
 \RequirePackage{epsfig}
@@ -37,7 +37,7 @@
 \newcommand{\subject}[1]{\renewcommand{\@subject}{\subjectname: #1}}
 
 \newboolean{logofound}
-\IfFileExists{fudan.png}
+\IfFileExists{osu-header.png}
     {\setboolean{logofound}{true}}
     {\setboolean{logofound}{false}}
 
@@ -77,9 +77,9 @@
     \parbox{4.00in}
     {\raggedright
         \ifthenelse{\boolean{logofound}}
-           {\epsfig{file=fudan.png, height=0.95in}}
+           {\epsfig{file=osu-header.png, height=0.95in}}
            {\parbox[c][2.0in][c]{4.0in}{\hfill} 
-            \ClassWarning{FDUletter}{fudan.png COULD NOT BE FOUND!}}
+            \ClassWarning{OSULetter}{osu-header.png COULD NOT BE FOUND!}}
     } &
 %DEPARTMENT OR SCHOOL
 %  This just sets the size of the box to the right of the logo, and the size of the vertical line.  The vertical line is set by the size of the first numerical argument of the \parbox command.
