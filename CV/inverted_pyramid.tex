@@ -1,0 +1,60 @@
+
+\documentclass{article}
+
+
+\usepackage{tikz}
+
+\usetikzlibrary{shapes.geometric, arrows}
+
+%************************************************************%
+%************* Tikz Pictures Definitions ********************%
+%************************************************************%
+%Style of flow chart
+\tikzstyle{triangle} = [regular polygon,regular polygon sides=3, fill=blue!20, shape border rotate=180]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+
+\def \lenscale {1cm}
+
+\newcommand{\xf}{0.5*\lenscale}
+
+\newcommand{\yf}{3*\lenscale}
+
+\newcommand{\defLen}[1]{\def \lenscale {#1*1cm}}
+
+\newcommand{\pyramidbase}[1]{1}
+{
+    
+}
+
+\newcommand{\SkillsPyramid}[1][1]
+{
+    \defLen{#1}
+    \begin{tikzpicture}[node distance=2.5cm]
+        %base
+        \draw [fill=black!20](0,0) -- (\xf,\yf) -- (-\xf,\yf) -- cycle;
+        \draw [fill=black!20](0,0) -- (-\xf,\yf) -- (-2*\xf,1.2*\yf) -- cycle;
+        \draw [fill=black!20](0,0) -- (\xf,\yf) -- (2*\xf,1.2*\yf) -- cycle;
+        % next block
+        \draw [fill=red!20](\xf,\yf) -- (-\xf,\yf)  -- (-2*\xf,2*\yf) -- (2*\xf, 2*\yf) -- cycle;
+        \draw [fill=red!20](-\xf,\yf) -- (-2*\xf,1.2*\yf)  -- (-3.5*\xf,2.2*\yf) -- (-2*\xf, 2*\yf) -- cycle;
+        \draw [fill=red!20](\xf,\yf) -- (2*\xf,1.2*\yf)  -- (3.5*\xf,2.2*\yf) -- (2*\xf, 2*\yf) -- cycle;
+        % next block
+        \draw [fill=blue!20](2*\xf,2*\yf) -- (-2*\xf,2*\yf)  -- (-3*\xf,3*\yf) -- (3*\xf, 3*\yf) -- cycle;
+        \draw [fill=blue!20](-3*\xf,3*\yf) -- (-5*\xf,3.2*\yf)  -- (-3.5*\xf,2.2*\yf) -- (-2*\xf, 2*\yf) -- cycle;
+        \draw [fill=blue!20](3*\xf,3*\yf) -- (5*\xf,3.2*\yf)  -- (3.5*\xf,2.2*\yf) -- (2*\xf, 2*\yf) -- cycle;
+        % top
+        \draw [fill=blue!20](-5*\xf,3.2*\yf) -- (-3*\xf,3*\yf)  -- (3*\xf,3*\yf) -- (5*\xf,3.2*\yf) -- cycle;
+        % \draw [fill=black](0,0) -- (2,2.5) -- (-2,2.5) -- cycle;
+        % \draw [arrow] (start2) --  (dec1);
+    \end{tikzpicture}
+}
+ 
+ \begin{document}
+ 
+ \SkillsPyramid{1}
+ 
+ 
+ 
+ 
+ \end{document}

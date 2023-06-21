@@ -1,0 +1,36 @@
+%% This program can be redistributed and/or modified under the terms
+%% of the LaTeX Project Public License Distributed from CTAN archives
+%% in directory macros/latex/base/lppl.txt.
+%
+\NeedsTeXFormat{LaTeX2e}[1994/06/01]
+\ProvidesPackage{my-thesis-styles}
+  [2021/01/11 v0.01 LaTeX package for frequent math commands used in my thesis.]
+\RequirePackage{amssymb, amsfonts, amsmath, tikz, minted, hyperref}
+\usepackage[version=4]{mhchem}
+\usetikzlibrary{shapes.geometric, arrows}
+
+%************************************************************%
+%************* Tikz Pictures Definitions ********************%
+%************************************************************%
+%Style of flow chart
+\tikzstyle{triangle} = [regular polygon,regular polygon sides=3]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+
+\def \lenscale {1cm}
+
+\newcommand{\xfactor}{1*\lenscale}
+
+\newcommand{\yfactor}{1.375*\lenscale}
+
+\newcommand{\defLen}[1]{\def \lenscale {#1*1cm}}
+
+
+\newcommand{\SkillsPyramid}[1][1]
+{
+    \defLen{#1}
+    \begin{tikzpicture}[node distance=2.5cm]
+        \node (triangle) [startstop] {Some text};
+        % \draw [arrow] (start2) --  (dec1);
+    \end{tikzpicture}
+}
