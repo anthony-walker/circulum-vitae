@@ -65,14 +65,17 @@ emoji = r"(?:[^\s])(?<![\w{ascii_printable}])".format(ascii_printable=string.pri
 emoji = r"(?:[^\s])(?<![\w{ascii_printable}])".format(ascii_printable=string.printable)
 regexp = r"{normal_word}|{ascii_art}|{emoji}".format(normal_word=normal_word, ascii_art=ascii_art, emoji=emoji)
 # Generate a word cloud image
-wordcloud = WordCloud(background_color="white", regexp=regexp)
+wordcloud = WordCloud(background_color="white", regexp=regexp, font_step=2, width=600, height=150)
 
 cloud = wordcloud.generate(text)
 # Display the generated image:
 # the matplotlib way:
 import matplotlib.pyplot as plt
+# plt.figure( )
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
+plt.tight_layout()
+plt.show()
 plt.savefig("cv-cloud.pdf")
 
 # # lower max_font_size
