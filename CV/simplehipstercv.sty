@@ -191,7 +191,7 @@
 
 \newcommand{\simpleheader}[5]{
 \tikz[remember picture,overlay] {%
-\node[rectangle, fill=#1, anchor=north, minimum width=\paperwidth, minimum height=3.5cm](header) at (current page.north){};%
+\node[rectangle, fill=#1, anchor=north, minimum width=\paperwidth, minimum height=2.5cm](header) at (current page.north){};%
 \node[draw=none, align=left](name) at (header) {%
 {\Huge \color{#5} #2 \textbf{#3} }%
 };%
@@ -274,13 +274,13 @@
 }
 
 
-\renewcommand{\section}[3]{%
+\renewcommand{\section}[4]{%
     \bigskip%
     % \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr 1pt-\baselineskip}\raggedright\input{#1}}}%
     \colorbox{#3}{
     \ifstrequal{#1}{}{}{\large \makebox[5mm][c]{#1}\hspace{0.5em}}
-    {\color{heading}\Large\bfseries\MakeUppercase{#2}}}\\[-1ex]%
-    {\color{heading}\rule{\linewidth}{1.0pt}\par}\smallskip
+    {\color{heading}\Large\textbf{\MakeUppercase{#2}}\hspace{#4}}}\\[-1ex]%
+    {\color{heading}\rule{\linewidth}{1.0pt}\par\smallskip}
 }
 % \bfseries\color{#2}#3}
 
