@@ -65,7 +65,7 @@ emoji = r"(?:[^\s])(?<![\w{ascii_printable}])".format(ascii_printable=string.pri
 emoji = r"(?:[^\s])(?<![\w{ascii_printable}])".format(ascii_printable=string.printable)
 regexp = r"{normal_word}|{ascii_art}|{emoji}".format(normal_word=normal_word, ascii_art=ascii_art, emoji=emoji)
 # Generate a word cloud image
-wordcloud = WordCloud(background_color=None, mode="RGBA", regexp=regexp, font_step=2, width=150, height=500)
+wordcloud = WordCloud(background_color=None, mode="RGBA", regexp=regexp, font_step=2, width=250, height=450)
 
 cloud = wordcloud.generate(text)
 # Display the generated image:
@@ -76,7 +76,7 @@ plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
 plt.tight_layout()
 # plt.show()
-plt.savefig("cv-cloud-vert.pdf")
+plt.savefig("cv-cloud-vert.png", dpi=1200)
 
 # # lower max_font_size
 # wordcloud = WordCloud(max_font_size=40).generate(text)
