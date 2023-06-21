@@ -75,7 +75,7 @@ import matplotlib.pyplot as plt
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
 plt.tight_layout()
-plt.show()
+# plt.show()
 plt.savefig("cv-cloud.pdf")
 
 # # lower max_font_size
