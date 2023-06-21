@@ -525,6 +525,12 @@
 }
 
 % \pubforcefullwidth
+\newcommand{\pubdefaultspacing}{%
+    \setlength{\pubdatelength}{0.15\linewidth}
+    \setlength{\pubjournallength}{0.65\linewidth}
+    \setlength{\publinklength}{0.20\linewidth}
+}
+
 \pubdefaultspacing
 
 \newcommand{\publication}[5]{%
