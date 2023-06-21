@@ -60,7 +60,7 @@
 \thispagestyle{empty}
 %-------------------------------------------------------------
 
-\section*{Start}
+\section{}{Start}{}{}
 
 \simpleheader{headercolour}{Anthony S.}{Walker}{Ph.D. Candidate \& Scientific Developer}{white}
 
@@ -68,7 +68,7 @@
 
 % this has to be here so the paracols starts..
 \subsection*{}
-\vspace{4em}
+% \vspace{4em}
 
 \setlength{\columnsep}{1.5cm}
 \columnratio{0.30}[0.70]
@@ -85,11 +85,11 @@
 {\setasidefontcolour
 \flushright
 \begin{center}
-    \roundpic{walker-gray.jpg}
+    \squarepic{walker-gray.jpg}
 \end{center}
 
 \begin{flushleft}
-    
+\section{\faInfo}{Contact}{cldteal}{1.1cm}
     \email{walkanth@oregonstate.edu}
     \phone{707-337-3595}
     \location{Waynesburg PA}
@@ -103,7 +103,7 @@
 
 
 % \begin{minipage}[t]{0.\textwidth}
-\section{\faPaperclip}{Coursework}{cldgrnbl}
+\section{\faPaperclip}{Coursework}{cldgrnbl}{1.1cm}
 \begin{flushleft}
 \wheelchart{1.25cm}{0.25cm}{% outer and inner diameter
     10/6em/cldgrnbl/Thermal Fluid Sciences,    % fraction of 24 / line length / color / label
@@ -141,9 +141,9 @@
 % \end{tabular}
 % \bigskip
 
-\section{\faCode}{Programming \& Software}{cldblgry}
+\section{\faCode}{Software}{cldblgry}{1.8cm}
 \begin{center}
-    \includegraphics[scale=0.75,trim={0.25cm 4cm 0.25cm 4cm},clip]{CV/cv-cloud-vert.pdf}
+    \includegraphics[scale=0.75,trim={5.25cm 0.25cm 5.25cm 0.25cm},clip]{CV/cv-cloud-vert.pdf}
 \end{center}
 
 \end{flushleft}
@@ -156,7 +156,7 @@
 \switchcolumn
 
 \small
-\section{\faGears}{Employment}{cldteal}
+\section{\faGears}{Employment}{cldteal}{8cm}
 
 \begin{tabular}{r| p{0.5\textwidth} c}
     \cvevent{Aug 2016--May 2018}{Undergraduate Research Assistant}{Penn State}{Erie PA \color{cldgrnbl}}{Develop software for modeling and simulation of piezo-electrics in turbulent flow.}{}\\
@@ -166,14 +166,14 @@
     
 \end{tabular}
 
-\section{\faBook}{Education}{cldlg}
+\section{\faBook}{Education}{cldlg}{8cm}
 \begin{tabular}{r p{0.6\textwidth} c}
     \cvdegree{2018}{Penn State}{B.S. Mechanical Engineering}{Minor Computer Science\color{cldlg}}{GPA: 3.41}{}{}\\
     \cvdegree{2021}{Oregon State}{M.S. Mechanical Engineering}{\color{cldgrnbl}}{GPA: 3.83}{}{}\\
     \cvdegree{Expected 2023}{Oregon State}{Ph.D. Mechanical Engineering}{Minor Computer Science\color{cldblgry}}{GPA: 3.83}{}{}\\
 \end{tabular}
 
-\section{\faFile}{Publications}{cldgrnbl}
+\section{\faFile}{Publications}{cldgrnbl}{8cm}
 \publication
 {Generalized preconditioning for accelerating simulations with large kinetic models}
 {\textbf{Anthony S. Walker}, Raymond L. Speth, Kyle E. Niemeyer}
