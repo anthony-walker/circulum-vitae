@@ -7,11 +7,11 @@
 % withoutsidebar
 \usepackage[utf8]{inputenc}
 \usepackage[default]{raleway}
-\usepackage[margin=1cm, a4paper]{geometry}
+\usepackage[margin=0.1cm, a4paper]{geometry}
 \usepackage{svg}
 \usepackage{academicons}
 \usepackage{xcolor}
-
+\usepackage{pgf}
 \definecolor{cldgrnbl}{HTML}{38B978}
 \definecolor{cldblgry}{HTML}{287B8D}
 \definecolor{cldprp}{HTML}{46377A}
@@ -50,7 +50,7 @@
 
 %------------------------------------------------------------------
 \title{Anthony Walker's CV}
-\author{Anthony Walker
+\author{Anthony Walker}
 \date{June 2023}
 
 \pagestyle{empty}
@@ -60,18 +60,18 @@
 \thispagestyle{empty}
 %-------------------------------------------------------------
 
-\section{}{Start}{}{}
+% \section{}{Start}{}{}
 
 \simpleheader{headercolour}{Anthony S.}{Walker}{Ph.D. Candidate \& Scientific Developer}{white}
-
+\vspace{40pt}
 %------------------------------------------------
 
 % this has to be here so the paracols starts..
 \subsection*{}
 % \vspace{4em}
 
-\setlength{\columnsep}{1.5cm}
-\columnratio{0.30}[0.70]
+\setlength{\columnsep}{0.5cm}
+\columnratio{0.3}[0.65]
 \begin{paracol}{2}
 \hbadness5000
 %\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
@@ -97,8 +97,8 @@
     \github{@anthony-walker}{https://github.com/anthony-walker}
     \gitlab{@dev.sokato}{https://github.com/dev.sokato}
     \linkedin{Anthony Walker}{https://www.linkedin.com/in/anthony-walker-4b8a9712b/}
-    \orcid{0000-0002-0616-6998}{https://www.orcid.org/0000-0002-0616-6998}
-    \nrg{My Research Lab!}{https://niemeyer-research-group.github.io/lab}
+    % \orcid{0000-0002-0616-6998}{https://www.orcid.org/0000-0002-0616-6998}
+    % \nrg{My Research Lab!}{https://niemeyer-research-group.github.io/lab}
 
 \section{\faPaperclip}{Coursework}{cldgrnbl}{0.5cm}
 \begin{flushleft}
@@ -106,13 +106,13 @@
     10/6em/cldgrnbl/Thermal Fluid Sciences,    % fraction of 24 / line length / color / label
     6/6em/cldblgry/Mathematics,          % here, the color is shades of the accent color
     11/6em/cldprp/Computer Science
-    }    
+    }
 \end{flushleft}
 
 
 \section{\faCode}{Software}{cldblgry}{1.35cm}
 \begin{center}
-    \includegraphics[scale=0.65,trim={4.25cm 0.4cm 4.25cm 0.4cm},clip]{CV/transparent.png}
+    \includegraphics[scale=0.65,trim={4.25cm 0.4cm 4.25cm 0.4cm},clip]{transparent.png}
 \end{center}
 
 
@@ -140,27 +140,27 @@
 \begin{tabular}{r| p{0.5\textwidth} c}
     \cvevent{Aug 2016--May 2018}{Undergraduate Research Assistant}{Penn State}{Erie PA \color{cldgrnbl}}{\begin{itemize}
         \item Developed software for modeling of piezo-electric power generation in turbulent flow.
-    \end{itemize}}{}\\
+    \end{itemize}}\\
     \cvevent{May 2017--Aug 2017}{Test Stand Engineering Intern}{Bell Helicopter}{Fort Worth TX \color{cldblgry}}{
     \begin{itemize}
         \item Developed a troubleshooting guide for repair and maintenance of test stand systems.
-    \end{itemize}}{}\\
+    \end{itemize}}\\
     \cvevent{Sept 2018--Present}{Graduate Research Assistant}{Oregon State University}{Corvallis OR \color{cldprp}}{\begin{itemize}
         \item Development of a heterogeneous coupled GPU/CPU solver to reduce latency and accelerate simulations of multi-dimensional PDEs.
         \item Open source development within \href{https://cantera.org/}{Cantera} to accelerate chemical kinetics with advanced numerical techniques.
-    \end{itemize}}{lab-logo-original.svg} \\
+    \end{itemize}} \\
     \cvevent{April 2022--Present}{KP-SAM Scientific Developer Intern}{Kairos Power}{Alameda CA \color{cldteal}}{\begin{itemize}
         \item Development and maintenance of a package to automatically generate input files for a \href{https://www.anl.gov/nse/system-analysis-module}{nuclear design code}.
         \item Development of automatic verification software for the core-design team.
         \item Various miscellaneous responsibilities such as database setup, numerical benchmarking, and automated memo generation.
-    \end{itemize}}{}
+    \end{itemize}}
 \end{tabular}
 
 \section{\faBook}{Education}{cldlg}{8.2cm}
 \begin{tabular}{r p{0.6\textwidth} c}
-    \cvdegree{2018}{Penn State}{B.S. Mechanical Engineering}{Minor Computer Science\color{cldlg}}{GPA: 3.41}{}{}\\
-    \cvdegree{2021}{Oregon State}{M.S. Mechanical Engineering}{\color{cldgrnbl}}{GPA: 3.83}{}{}\\
-    \cvdegree{Expected 2023}{Oregon State}{Ph.D. Mechanical Engineering}{Minor Computer Science\color{cldblgry}}{GPA: 3.83}{}{}\\
+    \cvdegree{2018}{Penn State}{B.S. Mechanical Engineering}{Minor Computer Science\color{cldlg}}{GPA: 3.41}\\
+    \cvdegree{2021}{Oregon State}{M.S. Mechanical Engineering}{\color{cldgrnbl}}{GPA: 3.83}\\
+    \cvdegree{Expected 2023}{Oregon State}{Ph.D. Mechanical Engineering}{Minor Computer Science\color{cldblgry}}{GPA: 3.83}\\
 \end{tabular}
 
 \section{\faFile}{Publications}{cldgrnbl}{7.5cm}
@@ -183,7 +183,7 @@
 {Magee, Daniel J \& \textbf{Walker, Anthony S} \& Niemeyer, Kyle E} % Authors
 {2020} % Year
 {Journal of Supercomputing,\\ https://doi.org/10.1007/s11227-020-03340-9} % Journal
-{} % ADS & arxiv links
+{\color{black}\pgfsetfillopacity{1}} % ADS & arxiv links
 
 
 
@@ -193,7 +193,7 @@
 % \end{center}
 
 
- 
+
 % \begin{minipage}[t]{0.25\textwidth}
 % \section*{References}
 % \begin{tabular}{l l l}

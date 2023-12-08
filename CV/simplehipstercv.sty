@@ -23,18 +23,18 @@
 \usetikzlibrary{shapes.misc,positioning}
 \usetikzlibrary{arrows}
 \usetikzlibrary{arrows.meta}
-\usetikzlibrary{backgrounds} 
+\usetikzlibrary{backgrounds}
 \usetikzlibrary{shadings}
-\usetikzlibrary{calendar} 
+\usetikzlibrary{calendar}
 \usetikzlibrary{er}
 \usetikzlibrary{patterns} % horizontal lines, vertical lines, north east lines, north west lines, grid, crosshatch, dots, crosshatch dots, fivepointed stars, sixpointed stars, bricks
-\usetikzlibrary{shapes} 
+\usetikzlibrary{shapes}
 \usetikzlibrary{shapes.geometric}
 \usetikzlibrary{decorations}
 \usetikzlibrary{topaths}
 
 \usepackage{graphicx}
-%\usepackage[usenames, dvipsnames]{color} 
+%\usepackage[usenames, dvipsnames]{color}
 % https://de.sharelatex.com/learn/Using_colours_in_LaTeX#!#Reference_guide z.B. \color{RubineRed}
 %\usepackage{xcolor}
 
@@ -47,14 +47,14 @@
 
 % Format of the section titles
 \titleformat{\section}{
-\scshape\Large\raggedright}{}{0em}{}[\titlerule] % smallcaps, Large, continuous line - looks better if two columns, might look a bit too dramatic if just one ;) 
+\scshape\Large\raggedright}{}{0em}{}[\titlerule] % smallcaps, Large, continuous line - looks better if two columns, might look a bit too dramatic if just one ;)
 \titlespacing{\section}{0pt}{12pt}{5pt} % Spacing around titles {<left spacing>}{<before spacing>}{<after spacing>}
 %----------------------------------------------------
 
  \newcommand{\cvkeyword}[3]{
  \colorbox{#2}{\textcolor{#3}{#1}} \phantom{}%
  }
- 
+
 %------------------------
 \newcommand{\cvtag}[1]{% from alta-cv: https://www.overleaf.com/latex/templates/altacv-template/trgqjpwnmtgv
   \tikz[baseline]\node[draw=black!40,rounded corners,inner sep=0.4em]{\color{black!50}#1};
@@ -73,7 +73,7 @@
 \node[left=0.5em,text=#3] at (-1,0) {#1 #7};%
 \end{tikzpicture}%
 }
- 
+
 
 \usepackage{smartdiagram}
 %-----------------------------------------------------
@@ -131,7 +131,7 @@
 
 
 
-%----------------------------------------------------- font highlighting / boxes with background color 
+%----------------------------------------------------- font highlighting / boxes with background color
 \newcommand{\bg}[3]{\colorbox{#1}{\bfseries\color{#2}#3}}
 \newcommand{\bgupper}[3]{\colorbox{#1}{\color{#2}\huge\bfseries\MakeUppercase{#3}}}
 
@@ -179,9 +179,9 @@
 {\color{#3}\rule[\baselineskip]{#1\textwidth}{#2}}\vspace{0.5em}
 }
 
-\newcommand{\cvevent}[6]{{#1} & \textbf{#2}\newline\textsc{#3} $\cdot$ {#4 ~\faMapMarker}\newline{\color{black!70}\footnotesize #5}\vspace{1.5em} & \raisebox{-0.7\height}{\includegraphics[height=1cm]{#6}}}
+\newcommand{\cvevent}[5]{{#1} & \textbf{#2}\newline\textsc{#3} $\cdot$ {#4 ~\faMapMarker}\newline{\color{black!70}\footnotesize #5}}
 
-\newcommand{\cvdegree}[6]{{#1} & \textbf{#2}\newline\textsc{#3} $\cdot$ {#4 {\phantom{i}\footnotesize ~\faUniversity}}\newline{\color{black!70}\scriptsize #5}\vspace{0.5em} & \raisebox{-0.7\height}{\includegraphics[height=0.5cm]{#6}}}
+\newcommand{\cvdegree}[4]{{#1} & \textbf{#2}\newline\textsc{#3} $\cdot$ {#4 {\phantom{i}\footnotesize ~\faUniversity}}}
 
 
 
@@ -198,7 +198,7 @@
 \node[draw=none, align=left](name) at (header) {%
 {\Huge \color{#5} #2 \textbf{#3} }%
 };%
-\node[draw=none, below](description) at (name.south) {\color{white}#4};% 
+\node[draw=none, below](description) at (name.south) {\color{white}#4};%
 }\vspace{-0.7cm}%
 }
 
@@ -272,7 +272,7 @@
       \end{scope}
 %      \draw[gray] (0,0) circle (\outerradius) circle (\innerradius);
     \end{tikzpicture}\par
-    
+
     \endgroup
 }
 
@@ -282,8 +282,8 @@
     % \ifstrequal{#1}{}{}{\marginpar{\vspace*{\dimexpr 1pt-\baselineskip}\raggedright\input{#1}}}%
     \colorbox{#3}{
     \ifstrequal{#1}{}{}{\large \makebox[5mm][c]{#1}\hspace{0.5em}}
-    {\color{heading}\Large\textbf{\MakeUppercase{#2}}\hspace{#4}}}\\[-1ex]%
-    {\color{heading}\rule{\linewidth}{1.0pt}\par\smallskip}
+    {\color{headercolour}\Large\textbf{\MakeUppercase{#2}}\hspace{#4}}}\\[-1ex]%
+    {\color{headercolour}\rule{\linewidth}{1.0pt}\par\smallskip}
 }
 % \bfseries\color{#2}#3}
 
@@ -302,7 +302,7 @@
 \pubdefaultspacing
 
 \newcommand{\publication}[5]{%
-    {\normalsize \color{emphasis}#1\par}
+    {\normalsize #1\par}
     \vspace{0.1em}%
     \begin{minipage}[t]{3mm}%
         \makebox[3mm][c]{\footnotesize \faGroup}

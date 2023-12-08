@@ -36,8 +36,7 @@
 
 % TIMELINE
 \definecolor{timelinecolour}{HTML}{414B96} %#660022
-\definecolor{jackbeige}{RGB}{226,212,186} 
-
+\definecolor{jackbeige}{RGB}{226,212,186}
 
 \newcommand{\paracolbackgroundoptions}{
 %\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
@@ -73,7 +72,7 @@
 
 % TIMELINE
 \definecolor{timelinecolour}{HTML}{414B96} %#660022
-\definecolor{jackbeige}{RGB}{226,212,186}  
+\definecolor{jackbeige}{RGB}{226,212,186}
 
 \newcommand{\paracolbackgroundoptions}{
 \backgroundcolor{c[0](4pt,4pt)(0.5\columnsep,4pt)}[rgb]{0.9,0.9,0.9}
@@ -103,7 +102,7 @@
 
 % TIMELINE
 \definecolor{timelinecolour}{HTML}{414B96} %#660022
-\definecolor{jackbeige}{RGB}{226,212,186} 
+\definecolor{jackbeige}{RGB}{226,212,186}
 
 \newcommand{\paracolbackgroundoptions}{
 \backgroundcolor{c[0](4pt,4pt)(0.5\columnsep,4pt)}[rgb]{0.9,0.9,0.9}
@@ -137,8 +136,8 @@
 
 % TIMELINE
 \definecolor{timelinecolour}{HTML}{414B96} %#660022
-\definecolor{jackbeige}{RGB}{226,212,186} 
- 
+\definecolor{jackbeige}{RGB}{226,212,186}
+
 \newcommand{\paracolbackgroundoptions}{
 \backgroundcolor{c[0](4pt,4pt)(0.5\columnsep,4pt)}[rgb]{1,1,1}
 \backgroundcolor{c[1](0.5\columnsep,4pt)(4pt,4pt)}[rgb]{1,1,1}
@@ -188,9 +187,9 @@
 
 % TIMELINE
 \definecolor{timelinecolour}{HTML}{414B96} %#660022
-\definecolor{jackbeige}{RGB}{226,212,186} 
- 
- 
+\definecolor{jackbeige}{RGB}{226,212,186}
+
+
 \newcommand{\paracolbackgroundoptions}{
 \backgroundcolor{c[0](4pt,4pt)(0.5\columnsep,4pt)}[rgb]{1,1,1}
 \backgroundcolor{c[1](0.5\columnsep,4pt)(4pt,4pt)}[rgb]{1,1,1}
@@ -241,8 +240,8 @@
 
 % TIMELINE
 \definecolor{timelinecolour}{HTML}{414B96} %#660022
-\definecolor{jackbeige}{RGB}{226,212,186} 
- 
+\definecolor{jackbeige}{RGB}{226,212,186}
+
 \newcommand{\paracolbackgroundoptions}{
 \backgroundcolor{c[0](4pt,4pt)(0.5\columnsep,4pt)}[rgb]{0.9,0.9,0.9}
 \backgroundcolor{c[1](0.5\columnsep,4pt)(4pt,4pt)}[rgb]{1,1,1}
@@ -292,8 +291,8 @@
 
 % TIMELINE
 \definecolor{timelinecolour}{HTML}{414B96} %#660022
-\definecolor{jackbeige}{RGB}{226,212,186} 
- 
+\definecolor{jackbeige}{RGB}{226,212,186}
+
 \newcommand{\paracolbackgroundoptions}{
 \backgroundcolor{c[0](4pt,4pt)(0.5\columnsep,4pt)}[rgb]{1,1,1}
 \backgroundcolor{c[1](0.5\columnsep,4pt)(4pt,4pt)}[rgb]{1,1,1}
